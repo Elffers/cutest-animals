@@ -28,28 +28,35 @@
     <h1>Kittens</h1>
     <ul>
       {{#each}}
-        <li><h2> {{ title }} </h2>
-           <img {{bind-attr src=url}} width=300>
+        <li>
+          <h2>{{ title }} </h2>
+          <img {{bind-attr src=url}} width=300>
         </li>
-    {{/each}}
+      {{/each}}
     </ul>
   </script>
 
   <script type="text/x-handlebars" id='puppies'>
     <h1>Puppies</h1>
     <ul>
-      <li><img src="http://blog-photos.dogvacay.com/wp-content/uploads/2012/03/cute-dog-puppy-white-Favim.com-267645.jpg" width=300></li>
-      <li><img src="http://i.imgur.com/PUgn8nH.jpg" width=300></li>
-      <li><img src="https://lh3.googleusercontent.com/-DQF6lzxrNgg/Uv14piu3UPI/AAAAAAAAJ5o/1VzlRPn8HMY/w533-h713/145e60e4-2a6e-4de9-a849-a2f2b84d4c67" width=300></li>
+      {{#each}}
+        <li>
+          <h2>{{ title }} </h2>
+          <img {{bind-attr src=url}} width=300>
+        </li>
+      {{/each}}
     </ul>
   </script>
 
   <script type="text/x-handlebars" id='bunnies'>
     <h1>Buy the Things</h1>
     <ul>
-      <li><img src="http://i.imgur.com/istyEnq.jpg" width=300></li>
-      <li><img src="http://images4.fanpop.com/image/photos/19800000/baby-bunnies-baby-bunnies-19896687-1024-768.jpg" width=300></li>
-      <li><img src="http://readjack.files.wordpress.com/2012/02/cute_bunny.jpg" width=300></li>
+      {{#each}}
+        <li>
+          <h2>{{ title }} </h2>
+          <img {{bind-attr src=url}} width=300>
+        </li>
+      {{/each}}
     </ul>
   </script>
 
