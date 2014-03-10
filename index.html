@@ -27,10 +27,11 @@
   <script type="text/x-handlebars" id='kittens'>
     <h1>Kittens</h1>
     <ul>
-      <li><img src="http://critterbabies.com/wp-content/gallery/kittens/cats-animals-kittens-background-us.jpg" width=300></li>
-      <li><img src="http://critterbabies.com/wp-content/gallery/kittens/Kitten-pic-cute-kittens-16292210-1024-768.jpg" width=300></li>
-      <li><img src="http://images2.fanpop.com/image/photos/10500000/Cute-Wallpapers-cute-kittens-10501750-1024-768.jpg" width=300></li>
-
+      {{#each}}
+        <li><h2> {{ title }} </h2>
+           <img {{bind-attr src=url}} width=300>
+        </li>
+    {{/each}}
     </ul>
   </script>
 
