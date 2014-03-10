@@ -7,14 +7,49 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- this is like application.html.erb -->
   <script type="text/x-handlebars">
-    <h1>This is a Test.</h1>
-
+    <h1>Welcome to the Cutest App On Earth</h1>
+    <h2>your one-stop shop for all things fluffy</h2>
+    <ul>
+      <li>{{#link-to 'kittens'}} Kittens {{/link-to}}</li>
+      <li>{{#link-to 'puppies'}} Puppies {{/link-to}}</li>
+      <li>{{#link-to 'bunnies'}} Bunnies {{/link-to}}</li>
+    </ul>
     {{ outlet }}
   </script>
 
-   <script type="text/x-handlebars" id='home'>
-    <h1>Welcome home.</h1>
+  <script type="text/x-handlebars" id='home'>
+    <h1>Buy the Things</h1>
+
+  </script>
+
+  <script type="text/x-handlebars" id='kittens'>
+    <h1>Kittens</h1>
+    <ul>
+      <li><img src="http://critterbabies.com/wp-content/gallery/kittens/cats-animals-kittens-background-us.jpg" width=300></li>
+      <li><img src="http://critterbabies.com/wp-content/gallery/kittens/Kitten-pic-cute-kittens-16292210-1024-768.jpg" width=300></li>
+      <li><img src="http://images2.fanpop.com/image/photos/10500000/Cute-Wallpapers-cute-kittens-10501750-1024-768.jpg" width=300></li>
+
+    </ul>
+  </script>
+
+  <script type="text/x-handlebars" id='puppies'>
+    <h1>Puppies</h1>
+    <ul>
+      <li><img src="http://blog-photos.dogvacay.com/wp-content/uploads/2012/03/cute-dog-puppy-white-Favim.com-267645.jpg" width=300></li>
+      <li><img src="http://i.imgur.com/PUgn8nH.jpg" width=300></li>
+      <li><img src="https://lh3.googleusercontent.com/-DQF6lzxrNgg/Uv14piu3UPI/AAAAAAAAJ5o/1VzlRPn8HMY/w533-h713/145e60e4-2a6e-4de9-a849-a2f2b84d4c67" width=300></li>
+    </ul>
+  </script>
+
+  <script type="text/x-handlebars" id='bunnies'>
+    <h1>Buy the Things</h1>
+    <ul>
+      <li><img src="http://i.imgur.com/istyEnq.jpg" width=300></li>
+      <li><img src="http://images4.fanpop.com/image/photos/19800000/baby-bunnies-baby-bunnies-19896687-1024-768.jpg" width=300></li>
+      <li><img src="http://readjack.files.wordpress.com/2012/02/cute_bunny.jpg" width=300></li>
+    </ul>
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>
