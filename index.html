@@ -29,10 +29,19 @@
     <ul>
       {{#each}}
         <li>
-          <h2>{{ title }} </h2>
+          {{#link-to 'kitten' }}
+            <h2>{{ title }} </h2>
+          {{/link-to}}
           <img {{bind-attr src=url}} width=300>
         </li>
       {{/each}}
+    </ul>
+  </script>
+
+  <script type="text/x-handlebars" id='kitten'>
+    <h1>{{title}}</h1>
+      <div><img {{bind-attr src=url}} width=500><div>
+      <p>{{description}}</p>
     </ul>
   </script>
 
@@ -41,7 +50,9 @@
     <ul>
       {{#each}}
         <li>
+        {{#link-to 'kitten' }}
           <h2>{{ title }} </h2>
+        {{/link-to}}
           <img {{bind-attr src=url}} width=300>
         </li>
       {{/each}}
@@ -64,6 +75,10 @@
   <script src="js/libs/handlebars-1.1.2.js"></script>
   <script src="js/libs/ember-1.4.0.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/models/kitten.js"></script>
+  <script src="js/models/puppy.js"></script>
+  <script src="js/models/bunny.js"></script>
+
   <!-- to activate the test runner, add the "?test" query string parameter -->
   <script src="tests/runner.js"></script>
 </body>
