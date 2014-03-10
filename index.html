@@ -33,7 +33,6 @@
             {{#link-to 'kitten' this }}
               <h2>{{ title }} </h2>
             {{/link-to}}
-            <p>{{description}}</p>
           </li>
         {{/each}}
       </ul>
@@ -47,6 +46,7 @@
   <script type="text/x-handlebars" id='kitten'>
       <h1>{{title}}</h1>
         <div><img {{bind-attr src=url}} width=500></div>
+        <div><p>{{description}}</p></div>
       </ul>
   </script>
 
