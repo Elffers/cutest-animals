@@ -29,7 +29,7 @@
     <ul>
       {{#each}}
         <li>
-          {{#link-to 'kitten' }}
+          {{#link-to 'kitten' this }}
             <h2>{{ title }} </h2>
           {{/link-to}}
           <img {{bind-attr src=url}} width=300>
@@ -50,24 +50,38 @@
     <ul>
       {{#each}}
         <li>
-        {{#link-to 'kitten' }}
-          <h2>{{ title }} </h2>
-        {{/link-to}}
+          {{#link-to 'puppy' this }}
+            <h2>{{ title }} </h2>
+          {{/link-to}}
           <img {{bind-attr src=url}} width=300>
         </li>
       {{/each}}
     </ul>
   </script>
+  <script type="text/x-handlebars" id='puppy'>
+    <h1>{{title}}</h1>
+      <div><img {{bind-attr src=url}} width=500><div>
+      <p>{{description}}</p>
+    </ul>
+  </script>
 
   <script type="text/x-handlebars" id='bunnies'>
-    <h1>Buy the Things</h1>
+    <h1>Bunnies</h1>
     <ul>
       {{#each}}
         <li>
-          <h2>{{ title }} </h2>
+          {{#link-to 'bunny' this }}
+            <h2>{{ title }} </h2>
+          {{/link-to}}
           <img {{bind-attr src=url}} width=300>
         </li>
       {{/each}}
+    </ul>
+  </script>
+  <script type="text/x-handlebars" id='bunny'>
+    <h1>{{title}}</h1>
+      <div><img {{bind-attr src=url}} width=500><div>
+      <p>{{description}}</p>
     </ul>
   </script>
 
