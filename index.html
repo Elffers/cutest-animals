@@ -25,24 +25,29 @@
   </script>
 
   <script type="text/x-handlebars" id='kittens'>
-    <h1>Kittens</h1>
-    <ul>
-      {{#each}}
-        <li>
-          {{#link-to 'kitten' this }}
-            <h2>{{ title }} </h2>
-          {{/link-to}}
-          <p>{{description}}</p>
-        </li>
-      {{/each}}
-    </ul>
+    <div class='kittens'>
+      <h1>Kittens</h1>
+      <ul>
+        {{#each}}
+          <li>
+            {{#link-to 'kitten' this }}
+              <h2>{{ title }} </h2>
+            {{/link-to}}
+            <p>{{description}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class= 'kitten'>
+      {{ outlet }}
+    </div>
+
   </script>
 
   <script type="text/x-handlebars" id='kitten'>
-    <h1>{{title}}</h1>
-      <div><img {{bind-attr src=url}} width=500><div>
-      <div><p>{{description}}</p></div>
-    </ul>
+      <h1>{{title}}</h1>
+        <div><img {{bind-attr src=url}} width=500></div>
+      </ul>
   </script>
 
   <script type="text/x-handlebars" id='puppies'>
@@ -53,15 +58,14 @@
           {{#link-to 'puppy' this }}
             <h2>{{ title }} </h2>
           {{/link-to}}
-          <p>{{description}}</p>
         </li>
       {{/each}}
     </ul>
   </script>
+
   <script type="text/x-handlebars" id='puppy'>
     <h1>{{title}}</h1>
-      <div><img {{bind-attr src=url}} width=500><div>
-      <p>{{description}}</p>
+      <div><img {{bind-attr src=url}} width=500></div>
     </ul>
   </script>
 
@@ -80,7 +84,7 @@
   </script>
   <script type="text/x-handlebars" id='bunny'>
     <h1>{{title}}</h1>
-      <div><img {{bind-attr src=url}} width=500><div>
+      <div><img {{bind-attr src=url}} width=500></div>
       <p>{{description}}</p>
     </ul>
   </script>
